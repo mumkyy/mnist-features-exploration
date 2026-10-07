@@ -1,5 +1,3 @@
-# nc-alex
-
 Train a small MLP on MNIST digits 0, 1 and 2, and look at what happens to the features in the layer just before the classifier.
 
 ## Setup
