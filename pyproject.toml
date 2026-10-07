@@ -1,5 +1,5 @@
 [project]
-name = "nc-alex"
+name = "mnist-features-exploration"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -32,7 +32,7 @@ explicit = true
 
 
 [project.scripts]
-nc-alex = "nc_alex:main"
+mnist-features-exploration = "mnist_features_exploration:main"
 
 [build-system]
 requires = ["uv_build>=0.12.12,<0.13.0"]
