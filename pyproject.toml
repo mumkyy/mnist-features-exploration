@@ -1,0 +1,44 @@
+[project]
+name = "nc-alex"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Assaf Izhar", email = "assafizhar@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "torch>=2.14",
+    "torchvision>=0.29",
+    "numpy",
+    "scipy",
+    "neural-collapse",
+    "tqdm>=4.70.0",
+    "matplotlib>=3.11.1",
+    "mrfi>=2.1.0",
+    "ipympl>=0.10.0",
+]
+
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
+neural-collapse = { git = "https://github.com/rhubarbwu/neural-collapse.git" }
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+
+[project.scripts]
+nc-alex = "nc_alex:main"
+
+[build-system]
+requires = ["uv_build>=0.12.12,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
